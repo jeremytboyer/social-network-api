@@ -5,9 +5,11 @@ const PORT = process.env.PORT || 3333;
 app.use(express.json());
 
 const user_routes = require('./routes/user_routes')
+const thought_routes = require('./routes/thought_routes')
 
 
-app.use('/api',[user_routes]);    
+
+app.use('/api',[user_routes, thought_routes]);    
 
 
 const db = require('./db/connection')
